@@ -21,7 +21,7 @@ export class LoginComponent {
 
   login() {
 
-    if(this.loginForm.value['email'] == "admin@gmail.com" && this.loginForm.value['password'] == "admin") {
+    if(this.loginForm.value['email'] == "admin@gmail.com" && this.loginForm.value['password'] == "pedrao") {
       this.router.navigate(["/app"])
     } else {
       this.invalidUser = true;
