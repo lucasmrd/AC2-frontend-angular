@@ -6,6 +6,7 @@ import { UsersComponent } from './pages/home/components/users/users.component';
 import { WelcomeComponent } from './pages/home/components/welcome/welcome.component';
 import { TodoListComponent } from './pages/home/pages/todo-list/todo-list.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { AdduserComponent } from './pages/home/components/adduser/adduser.component';
 
 const routes: Routes = [
   {path: "", redirectTo: "/login", pathMatch: 'full'},
@@ -16,6 +17,7 @@ const routes: Routes = [
     children: [
       {path: "", component: WelcomeComponent},
       {path: "users", component: UsersComponent},
+      {path: "adduser", component: AdduserComponent},
       {path: "todo-list", component: TodoListComponent}
     ]
   }

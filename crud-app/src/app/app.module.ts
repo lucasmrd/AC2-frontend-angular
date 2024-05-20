@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { WelcomeComponent } from './pages/home/components/welcome/welcome.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TodoListComponent } from './pages/home/pages/todo-list/todo-list.component';
+import { AdduserComponent } from './pages/home/components/adduser/adduser.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { TodoListComponent } from './pages/home/pages/todo-list/todo-list.compon
     NavbarComponent,
     UsersComponent,
     WelcomeComponent,
-    TodoListComponent
+    TodoListComponent,
+    AdduserComponent
   ],
   imports: [
     BrowserModule,
