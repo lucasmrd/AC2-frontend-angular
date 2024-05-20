@@ -10,7 +10,7 @@ import { AdduserComponent } from './pages/home/components/adduser/adduser.compon
 import { EdituserComponent } from './pages/home/components/edituser/edituser.component';
 
 const routes: Routes = [
-  {path: "", redirectTo: "/login", pathMatch: 'full'},
+  {path: "", redirectTo: "/app", pathMatch: 'full'},
   {path: "login", component: LoginComponent},
   {path: "signup", component: SignupComponent},
   {
