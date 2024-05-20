@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TodoListComponent } from './pages/home/pages/todo-list/todo-list.component';
 import { AdduserComponent } from './pages/home/components/adduser/adduser.component';
 import { EdituserComponent } from './pages/home/components/edituser/edituser.component';
+import { HomecontentComponent } from './pages/home/components/homecontent/homecontent.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { EdituserComponent } from './pages/home/components/edituser/edituser.com
     WelcomeComponent,
     TodoListComponent,
     AdduserComponent,
-    EdituserComponent
+    EdituserComponent,
+    HomecontentComponent
   ],
   imports: [
     BrowserModule,

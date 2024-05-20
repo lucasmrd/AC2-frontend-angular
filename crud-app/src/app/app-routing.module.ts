@@ -8,6 +8,7 @@ import { TodoListComponent } from './pages/home/pages/todo-list/todo-list.compon
 import { SignupComponent } from './pages/signup/signup.component';
 import { AdduserComponent } from './pages/home/components/adduser/adduser.component';
 import { EdituserComponent } from './pages/home/components/edituser/edituser.component';
+import { HomecontentComponent } from './pages/home/components/homecontent/homecontent.component';
 
 const routes: Routes = [
   {path: "", redirectTo: "/app", pathMatch: 'full'},
@@ -17,6 +18,7 @@ const routes: Routes = [
     path: "app", component: HomeComponent,
     children: [
       {path: "", component: WelcomeComponent},
+      {path: "home", component: HomecontentComponent},
       {path: "users", component: UsersComponent},
       {path: "adduser", component: AdduserComponent},
       {path: "edituser", component: EdituserComponent},
