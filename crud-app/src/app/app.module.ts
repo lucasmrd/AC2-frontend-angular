@@ -13,6 +13,7 @@ import { WelcomeComponent } from './pages/home/components/welcome/welcome.compon
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TodoListComponent } from './pages/home/pages/todo-list/todo-list.component';
 import { AdduserComponent } from './pages/home/components/adduser/adduser.component';
+import { EdituserComponent } from './pages/home/components/edituser/edituser.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AdduserComponent } from './pages/home/components/adduser/adduser.compon
     UsersComponent,
     WelcomeComponent,
     TodoListComponent,
-    AdduserComponent
+    AdduserComponent,
+    EdituserComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,52 @@
+<body>
+
+    <h1>Edit User</h1>
+    <br>
+    <form (ngSubmit)="salvar()" [formGroup]="userForm" #formDir="ngForm" class="container">
+        <!-- Nome -->
+        <div class="form-group">
+            <label for="nome">Nome</label>
+            <input class="form-control" type="text" id="nome" placeholder="Digite seu nome:" formControlName="nome">
+
+            <div *ngIf="nome.invalid && formularioEnviado" class="validation-error">
+                <div *ngIf="nome.errors?.['required']">Campo Obrigatório</div>
+            </div>
+        </div>
+        <br>
+        <!-- Email -->
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input class="form-control" type="text" id="email" placeholder="Digite seu e-mail:" formControlName="email">
+            <div *ngIf="email.invalid && formularioEnviado" class="validation-error">
+                <div *ngIf="email.errors?.['required']">Campo Obrigatório</div>
+                <div *ngIf="email.errors?.['email']">O campo deve ser um email</div>
+            </div>
+        </div>
+        <br>
+        <!-- Seletor -->
+        <div class="form-group">
+            <label for="funcao">Função</label>
+            <select class="form-control" id="funcao" formControlName="funcao">
+                <option>Engenheiro FE</option>
+                <option>Engenheiro BE</option>
+                <option>Analista de Dados</option>
+                <option>Líder Técnico</option>
+            </select>
+        </div>
+        <br>
+        <!-- Senha -->
+        <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input class="form-control" type="password" id="senha" placeholder="Digite sua senha:" minlength="6"
+                maxlength="15" formControlName="senha">
+            <div *ngIf="senha.invalid && formularioEnviado" class="validation-error">
+                <div *ngIf="senha.errors?.['required']">Campo Obrigatório</div>
+                <div *ngIf="senha.errors?.['minlength']">A senha deve ter entre 6 e 15 caracteres.</div>
+                <div *ngIf="senha.errors?.['maxlength']">A senha deve ter entre 6 e 15 caracteres.</div>
+            </div>
+        </div>
+        <br>
+        <input class="btn btn-primary" type="submit" value="Salvar">
+        <div *ngIf="userForm.valid && formularioEnviado" routerLink="/app/users"></div>
+    </form>
+</body>
